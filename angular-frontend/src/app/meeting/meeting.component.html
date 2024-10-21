@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Create a Meeting Schedule</h2>
+    <hr>
+    <form (ngSubmit)="onSubmitMeeting()">
+      <label for="client">Client</label>
+      <br>
+      <select id="client" [(ngModel)]="meeting.clientId" name="client" required>
+        <option *ngFor="let client of clients" [value]="client.id">{{client.name}}</option>
+      </select>
+  
+      <br>
+      <br>
+
+      <label for="date">Meeting Start Date</label>
+      <br>
+      <input type="date" id="date" [(ngModel)]="meeting.date" name="date" required>
+  
+      <br>
+      <br>
+
+      <label for="notes">Meeting Notes</label>
+      <br>
+      <textarea id="notes" [(ngModel)]="meeting.notes" name="notes"></textarea>
+  
+      <br>
+      <hr>
+
+      <button type="submit">Schedule Meeting</button>
+    </form>
+  </div>
+  

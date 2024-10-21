@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Create A Client</h2>
+    <h3>Please fill in this form to create a client.</h3>
+    <hr>
+
+    <form (ngSubmit)="onSubmitClient()">
+      <label for="name">Name</label>
+      <br>
+      <input type="text" id="name" [(ngModel)]="client.name" name="name" required>
+      
+      <br>
+      <br>
+  
+      <label for="email">Email</label>
+      <br>
+      <input type="email" id="email" [(ngModel)]="client.email" name="email" required>
+  
+      <br>
+      <br>
+
+      <label for="phone">Phone</label>
+      <br>
+      <input type="text" id="phone" [(ngModel)]="client.phone" name="phone" required>
+      
+      <hr>
+
+      <button type="submit">Register Client</button>
+    </form>
+  </div>
+  
